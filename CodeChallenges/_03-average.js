@@ -8,8 +8,8 @@ let kMarkThree = 110;
 
 dAverage = (dMarkOne + dMarkTwo + dMarkThree) / 3;
 kAverage = (kMarkOne + kMarkTwo + kMarkThree) / 3;
-const dWon = dAverage > 100;
-const kWon = kAverage > 100;
+const dWon = dAverage >= 100;
+const kWon = kAverage >= 100;
 
 if (dAverage === kAverage && dWon && kWon)
 {
