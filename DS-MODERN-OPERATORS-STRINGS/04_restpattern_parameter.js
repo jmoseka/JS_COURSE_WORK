@@ -28,8 +28,8 @@ const pizza = {
   },
 };
 
-/*const { monday, ...other_days } = opening_hours;
-console.log(other_days);*/
+const { wednesday, ...other_days } = opening_hours;
+console.log(other_days);
 
 //functions
 //adding arbitarry amount of values
