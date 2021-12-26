@@ -17,4 +17,4 @@ let copyRestaurant = { founded: 1989, ...restaurant };
 copyRestaurant.name = "Mcdonald";
 console.log(copyRestaurant.name);
 console.log(restaurant.name);
-console.log(copyRestaurant.founded);
+console.log(copyRestaurant.founded
