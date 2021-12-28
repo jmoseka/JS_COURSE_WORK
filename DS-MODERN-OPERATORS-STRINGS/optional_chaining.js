@@ -12,4 +12,7 @@ const person = {
     console.log(`Order is ${i} and also ${j}`);
   },
 };
+
+//methods
+
 console.log(person.order?.(0, 1) ?? "Method not available");
