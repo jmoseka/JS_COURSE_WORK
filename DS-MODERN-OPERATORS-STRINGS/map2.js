@@ -57,6 +57,6 @@ answer === question.get("correct")
 //keys
 //values
 //entries
-console.log(question.keys());
-console.log(question.values());
-console.log(question.entries());
+console.log([...question.keys()]);
+console.log([...question.values()]);
+console.log([...question.entries()]);
