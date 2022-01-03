@@ -25,8 +25,8 @@ const book = lufthansa.book;
 // Call method
 book.call(eurowings, 23, "Sarah Williams");
 book.call(lufthansa, 239, "Mary Cooper");
-console.log(eurowings);
-console.log(lufthansa);
+//console.log(eurowings);
+//console.log(lufthansa);
 
 const swiss = {
   airline: "Swiss Airline",
@@ -35,10 +35,33 @@ const swiss = {
 };
 
 book.call(swiss, 583, "Mary Cooper");
-console.log(swiss);
+//console.log(swiss);
 
 //apply method - rarely used. call can achieve the same thing
-const flighData = [583, "George Tarzan"];
+/*const flighData = [583, "George Tarzan"];
 book.apply(swiss, flighData);
 
-book.call(swiss, ...flighData);
+book.call(swiss, ...flighData);*/
+
+////////BIND METHOD - IMPORTANT
+const bookEW = book.bind(eurowings);
+const bookSwiss = book.bind(swiss);
+const bookLuf = book.bind(lufthansa);
+bookLuf(892, "Lina Lufthansa");
+bookSwiss(891, "Swiss Nana");
+bookEW(890, "Euro Bel");
+
+//more ways of bind - allow to set in stones arguments
+//can do const bookEW23 = book.bind(eurowings, 23, "moseka");
+//called partial application
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23("Raya EW23");
+console.log(eurowings);
+
+//with event listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  this.planes++;
+  console.log(this);
+  console.log(this.planes);
+};
