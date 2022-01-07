@@ -7,3 +7,10 @@ const balance = movements.reduce(function (acc, current, index, arr) {
 }, 0); //initial value - start counting at zero
 
 console.log(balance);
+
+//Maximum value
+const max = movements.reduce(function (acc, mov) {
+  if (acc > mov) return acc;
+  else return mov;
+}, movements[0]);
+console.log(max);
