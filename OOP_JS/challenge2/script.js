@@ -25,7 +25,9 @@ class Car{
 }
 
 const ford = new Car('Ford', 120);
-console.log('speed us' + ford.speedUS)
+//console.log('speed us' + ford.speedUS)
 ford.accelerate();
-ford.speedUS = 50;
+//ford.speedUS = 50;
+
+
 console.log(ford);
